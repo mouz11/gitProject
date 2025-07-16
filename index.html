@@ -6,6 +6,40 @@
     <title>Youtube</title>
 </head>
 <body>
+    <nav class="bg-gray-800 text-white p-4">
+        <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold">
+                <a href="/">Logo</a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-gray-300">Home</a>
+                <a href="#about" class="hover:text-gray-300">About</a>
+                <a href="#services" class="hover:text-gray-300">Services</a>
+                <a href="#contact" class="hover:text-gray-300">Contact</a>
+            </div>
+
+            <!-- Hamburger Menu for Mobile -->
+            <div class="md:hidden">
+                <button id="menu-toggle" class="focus:outline-none">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-gray-700">
+            <a href="#home" class="block py-2 px-4 hover:bg-gray-600">Home</a>
+            <a href="#about" class="block py-2 px-4 hover:bg-gray-600">About</a>
+            <a href="#services" class="block py-2 px-4 hover:bg-gray-600">Services</a>
+            <a href="#contact" class="block py-2 px-4 hover:bg-gray-600">Contact</a>
+        </div>
+    </nav>
+
     <div>
         <h1>Youtube Content</h1>
         <ul>
@@ -13,7 +47,19 @@
             <li>Video2</li>
             <li>Video3</li>
             <li>Video4</li>
+            <li>Video5</li>
+            <li>Video6</li>
+            <li>Video7</li>
         </ul>
     </div>
+
+        <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
 </body>
 </html>
